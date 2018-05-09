@@ -11,8 +11,7 @@ var VideoListView = Backbone.View.extend({
     // want to append video to div
     this.collection.forEach( function(item) {
       var video = new VideoListEntryView({model: item}).render();
-      // console.log('LOOK HERE', video.$el[0].innerHTML);
-      this.$('.video-list').append(video.$el[0].innerHTML);
+      this.$('.video-list').append(video.el);
     });
 
     return this;
